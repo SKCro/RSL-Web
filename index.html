@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html><head>
+  <title>RSL</title>
+  <link rel=stylesheet href=css/style.css>
+  <script>
+  function notFunctional(event){
+    event.preventDefault();
+    alert('This is just for show - nothing works yet.');
+  }
+  </script>
+  <meta name=description content="A basic 2017 Roblox revival">
+  <meta name=keywords content="roblox, 2017, revival">
+  <meta name=author content=SKCro>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+</head><body>
+<header id=topBar aria-label="Top navigation bar">
+  <nav class=top-bar-section aria-label="Section 1 - contains buttons for Home and Games sections">
+    <button id=home onclick=notFunctional(event);><img src=images/logo.svg alt="RSL Home">RSL Home</button>
+    <button id=games onclick=notFunctional(event);>Games</button>
+  </nav>
+  <nav class=top-bar-section aria-label="Section 2 - contains search bar">
+    <form name=search onsubmit=notFunctional(event);><input type=text id=search autocomplete=off placeholder=Search></form>
+  </nav>
+  <nav class=top-bar-section aria-label="Section 3 - contains account details or login button">
+    <span id=topUsername>Not Logged In</span>
+    <button id=settings onclick=notFunctional(event);>Settings</button>
+  </nav>
+</header>
+<main id=mainContent>
+  <form name=login onsubmit=notFunctional(event);>
+    <section class=login aria-label="Login form">
+      <h2>Log in</h2>
+      <input type=username placeholder=Username>
+      <input type=password placeholder=Password>
+      <input type=submit value="Log in!">
+    </section>
+    <section class=separator aria-hidden=true><h2>OR</h2></section>
+    <section class=signup aria-label="Signup button">
+      <h2><button onclick=notFunctional(event);>Sign up!</button></h2>
+    </section>
+  </form>
+</main>
+<footer id=footer>
+  <p>Revival run by <strong>Xeriff</strong>, site designed and coded by <strong><a href=https://github.com/SKCro>SKCro</a></strong>. This site is <em>not</em> affiliated with Roblox.</p>
+</footer></body></html>

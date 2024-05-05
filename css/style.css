@@ -1,0 +1,186 @@
+html{
+  --inset:0 -1px #000510;
+  --outset:0 2px 2px #000;
+}
+*{scrollbar-color:#048 #024;}
+*:focus-visible{outline:3px solid #0080fff0;}
+body{
+  margin:40px 0;
+  font-family:Source Sans Pro,Verdana,Tahoma,sans-serif;
+  background:#012;
+  color:#f0f0f0;
+  text-shadow:var(--outset);
+}
+body.login{
+  background-image:url(../images/login-bg.png);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+@font-face{
+  font-family:Source Sans Pro;
+  src:url(fonts/SSP.otf) format(opentype);
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:Source Sans Pro Black;
+  src:url(fonts/SSPBlack.woff2) format(woff2);
+  font-weight:900;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:Source Code Pro;
+  src: url(fonts/SCPStandard.woff2) format(woff2);
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+a{color:#0080ff;}
+a:hover,a:active{color:#0088ff;}
+a:visited{color:#0064c8;}
+code,kbd{font-family:Source Code Pro,monospace;}
+h1,h2,h3,h4,h5,h6,.ultrabold{font-family:Source Sans Pro Black,Source Sans Pro,Verdana,Tahoma,sans-serif;font-weight:900;}
+
+#topBar,#footer{
+  display:flex;
+  position:fixed;
+  padding:4px;
+  width:calc(100% - 8px);
+  height:32px;
+  justify-content:space-between;
+  text-shadow:var(--inset);
+  backdrop-filter:blur(4px);
+}
+
+#topBar{
+  top:0;
+  background:linear-gradient(#048d,#024d);
+  box-shadow:0 2px 2px #000510;
+}
+
+.top-bar-section{
+  display:flex;
+  width:33.33%;
+}
+.top-bar-section:nth-of-type(2){justify-content:center;}
+.top-bar-section:nth-of-type(3){justify-content:right;}
+.top-bar-section button{
+  width:128px;
+  height:100%;
+  border:0;
+  font-size:16px;
+  margin-right:8px;
+}
+#home{
+  width:64px;
+  color:#0000;
+  text-shadow:0 0;
+}
+#home img{width:100%;height:100%;filter:drop-shadow(0 -1px #000510);}
+#search{width:192px;}
+#topUsername{margin:auto 8px;}
+#settings{margin-right:0;}
+
+#mainContent{padding:8px;}
+
+form[name="login"]{
+  display:flex;
+  width:calc(50% - 8px);
+  height:calc(100vh - 96px);
+  margin:auto;
+  justify-content:space-between;
+}
+input:not([type="button"],[type="submit"]){
+  padding:8px;
+  margin-bottom:8px;
+  border:2px solid #000510;
+  border-radius:4px;
+  font-weight:bold;
+  text-align:left;
+  background:#0128;
+  color:#f0f0f0;
+  backdrop-filter:blur(4px);
+}
+input:not([type="button"],[type="submit"])::placeholder{opacity:0.64;font-weight:100;}
+form[name="login"] section:nth-of-type(odd){
+  width:33.33%;
+  margin:auto;
+  padding:4px;
+  text-align:center;
+}
+.login{display:flex;flex-direction:column;}
+
+.separator{
+  display:flex;
+  width:15%;
+  height:100%;
+  justify-content:space-between;
+  font-size:36px;
+  font-weight:bold;
+  text-shadow:var(--outset);
+}
+.separator::before,.separator::after{
+  content:'';
+  display:flex;
+  width:2px;
+  background:linear-gradient(#0000,#f0f0f0,#0000);
+}
+.separator h2{margin:auto;}
+
+button,input[type="button"],input[type="submit"]{
+  border:0;
+  border-radius:8px;
+  padding:4px;
+  font-size:14px;
+  font-weight:bold;
+  background:linear-gradient(#0050a0dd,#048d,#024d,#036d,#048d);
+  background-position:0 50%;
+  background-size:1px 200%;
+  color:#f0f0f0;
+  box-shadow:2px 2px 2px #000510;
+  text-shadow:0 -2px #000510;
+  backdrop-filter:blur(4px);
+  cursor:pointer;
+  transition:all 0.1s;
+}
+button:hover,input[type="button"]:hover,input[type="submit"]:hover,button:focus,input[type="button"]:focus,input[type="submit"]:focus{
+  background-position:0 0;
+  box-shadow:3px 3px 4px #000510;
+}
+button:active,input[type="button"]:active,input[type="submit"]:active{
+  background-position:0 100%;
+  color:#d0d0d0;
+  box-shadow:0 0 1px 1px #000510;
+}
+
+.signup button{
+  width:75%;
+  height:48px;
+  font-size:24px;
+}
+
+#footer{
+  bottom:0;
+  text-align:center;
+  background:linear-gradient(#024d,#048d);
+  box-shadow:0 -2px 2px #000510;
+}
+#footer p{margin:auto;}
+
+@media(max-width:760px){
+  .top-bar-section button{width:auto;font-size:14px;}
+  #search{width:75%;}
+  form[name="login"]{width:calc(100% - 8px);flex-direction:column;}
+  form[name="login"] section:nth-of-type(odd){width:100%;}
+  .separator{
+    width:100%;
+    height:15%;
+    font-size:28px;
+  }
+  .signup button{width:100%;}
+}
