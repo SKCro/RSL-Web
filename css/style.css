@@ -1,6 +1,6 @@
 /* Theme by SKCro - https://github.com/SKCro */
 html{
-  --inset:0 -1px #000510;
+  --inset:0 -1px #000;
   --outset:0 2px 2px #000;
 }
 *{scrollbar-color:#048 #024;}
@@ -10,7 +10,6 @@ body{
   font-family:Source Sans Pro,Verdana,Tahoma,sans-serif;
   background:#f0f0f0;
   color:#020202;
-  text-shadow:var(--outset);
 }
 body.login{
   background-image:url(../images/login-bg.png);
@@ -61,7 +60,8 @@ h1,h2,h3,h4,h5,h6,.ultrabold{font-family:Source Sans Pro Black,Source Sans Pro,V
 #topBar{
   top:0;
   background:linear-gradient(#048d,#024d);
-  box-shadow:0 2px 2px #000510;
+  color:#f0f0f0;
+  box-shadow:var(--outset);
 }
 
 .top-bar-section{
@@ -99,12 +99,12 @@ form[name="login"]{
 input:not([type="button"],[type="submit"]){
   padding:8px;
   margin-bottom:8px;
-  border:2px solid #000510;
+  border:2px solid #000;
   border-radius:4px;
   font-weight:bold;
   text-align:left;
   background:#0128;
-  color:#020202;
+  color:#f0f0f0;
   backdrop-filter:blur(4px);
 }
 input:not([type="button"],[type="submit"])::placeholder{opacity:0.64;font-weight:100;}
@@ -142,16 +142,16 @@ button,input[type="button"],input[type="submit"]{
   background:linear-gradient(#0050a0dd,#048d,#024d,#036d,#048d);
   background-position:0 50%;
   background-size:1px 200%;
-  color:#020202;
-  box-shadow:2px 2px 2px #000510;
-  text-shadow:0 -2px #000510;
+  color:#f0f0f0;
+  box-shadow:2px 2px 2px #000;
+  text-shadow:0 -2px #000;
   backdrop-filter:blur(4px);
   cursor:pointer;
   transition:all 0.1s;
 }
 button:hover,input[type="button"]:hover,input[type="submit"]:hover,button:focus,input[type="button"]:focus,input[type="submit"]:focus{
   background-position:0 0;
-  box-shadow:3px 3px 4px #000510;
+  box-shadow:3px 3px 4px #000;
 }
 button:active,input[type="button"]:active,input[type="submit"]:active{
   background-position:0 100%;
