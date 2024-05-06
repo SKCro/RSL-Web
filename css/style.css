@@ -2,12 +2,13 @@
 html{
   --inset:0 -1px #000;
   --outset:0 2px 2px #000;
+  --standard-font:Source Sans Pro,Verdana,Tahoma,sans-serif;
 }
 *{scrollbar-color:#048 #024;}
 *:focus-visible{outline:3px solid #0080fff0;}
 body{
   margin:40px 0;
-  font-family:Source Sans Pro,Verdana,Tahoma,sans-serif;
+  font-family:var(--standard-font);
   background:#f0f0f0;
   color:#020202;
 }
@@ -44,7 +45,7 @@ a{color:#0080ff;}
 a:hover,a:active{color:#0088ff;}
 a:visited{color:#0064c8;}
 code,kbd{font-family:Source Code Pro,monospace;}
-h1,h2,h3,h4,h5,h6,.ultrabold{font-family:Source Sans Pro Black,Source Sans Pro,Verdana,Tahoma,sans-serif;font-weight:900;}
+h1,h2,h3,h4,h5,h6,.ultrabold{font-family:Source Sans Pro Black,var(--standard-font);font-weight:900;}
 
 #topBar,#footer{
   display:flex;
