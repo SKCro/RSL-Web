@@ -8,8 +8,8 @@ html{
 body{
   margin:40px 0;
   font-family:Source Sans Pro,Verdana,Tahoma,sans-serif;
-  background:#f0f0f0;
-  color:#020202;
+  background:#012;
+  color:#f0f0f0;
   text-shadow:var(--outset);
 }
 body.login{
@@ -104,7 +104,7 @@ input:not([type="button"],[type="submit"]){
   font-weight:bold;
   text-align:left;
   background:#0128;
-  color:#020202;
+  color:#f0f0f0;
   backdrop-filter:blur(4px);
 }
 input:not([type="button"],[type="submit"])::placeholder{opacity:0.64;font-weight:100;}
@@ -142,7 +142,7 @@ button,input[type="button"],input[type="submit"]{
   background:linear-gradient(#0050a0dd,#048d,#024d,#036d,#048d);
   background-position:0 50%;
   background-size:1px 200%;
-  color:#020202;
+  color:#f0f0f0;
   box-shadow:2px 2px 2px #000510;
   text-shadow:0 -2px #000510;
   backdrop-filter:blur(4px);
