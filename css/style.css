@@ -1,7 +1,7 @@
 /* Theme by SKCro - https://github.com/SKCro */
 html{
-  --inset:0 -1px #000;
-  --outset:0 2px 2px #000;
+  --inset:0 -1px #020202;
+  --outset:0 2px 2px #020202;
   --standard-font:Source Sans Pro,Verdana,Tahoma,sans-serif;
 }
 *{scrollbar-color:#048 #024;}
@@ -76,15 +76,21 @@ h1,h2,h3,h4,h5,h6,.ultrabold{font-family:Source Sans Pro Black,var(--standard-fo
   border:0;
   font-size:16px;
   margin-right:8px;
+  background:none;
+  box-shadow:0 0;
+}
+.top-bar-section button:hover{
+  color:#020202;
+  background:linear-gradient(#aaa,#ccc);
+  box-shadow:0 0;
 }
 #home{
   width:64px;
   font-size:0px;
-  color:#0000;
+  color:#0202020;
   text-shadow:0 0;
 }
-#home img{width:100%;height:100%;filter:drop-shadow(0 -1px #000);}
-#search{width:192px;}
+#home img{width:100%;height:100%;filter:drop-shadow(0 -1px #020202);}
 #topUsername{margin:auto 8px;}
 #settings{margin-right:0;}
 
@@ -100,7 +106,7 @@ form[name="login"]{
 input:not([type="button"],[type="submit"]){
   padding:8px;
   margin-bottom:8px;
-  border:2px solid #000;
+  border:2px solid #020202;
   border-radius:4px;
   font-weight:bold;
   text-align:left;
@@ -130,7 +136,7 @@ form[name="login"] section:nth-of-type(odd){
   content:'';
   display:flex;
   width:2px;
-  background:linear-gradient(#0000,#f0f0f0,#0000);
+  background:linear-gradient(#0202020,#f0f0f0,#0202020);
 }
 .separator h2{margin:auto;}
 
@@ -144,20 +150,20 @@ button,input[type="button"],input[type="submit"]{
   background-position:0 50%;
   background-size:1px 200%;
   color:#f0f0f0;
-  box-shadow:2px 2px 2px #000;
-  text-shadow:0 -2px #000;
+  box-shadow:2px 2px 2px #020202;
+  text-shadow:0 -2px #020202;
   backdrop-filter:blur(4px);
   cursor:pointer;
   transition:all 0.1s;
 }
 button:hover,input[type="button"]:hover,input[type="submit"]:hover,button:focus,input[type="button"]:focus,input[type="submit"]:focus{
   background-position:0 0;
-  box-shadow:3px 3px 4px #000;
+  box-shadow:3px 3px 4px #020202;
 }
 button:active,input[type="button"]:active,input[type="submit"]:active{
   background-position:0 100%;
   color:#d0d0d0;
-  box-shadow:0 0 1px 1px #000;
+  box-shadow:0 0 1px 1px #020202;
 }
 
 .signup button{
@@ -170,13 +176,13 @@ button:active,input[type="button"]:active,input[type="submit"]:active{
   bottom:0;
   text-align:center;
   background:linear-gradient(#024d,#048d);
-  box-shadow:0 -2px 2px #000;
+  box-shadow:0 -2px 2px #020202;
 }
 #footer p{margin:auto;}
 
 @media(max-width:760px){
+  .top-bar-section{width:50%;}
   .top-bar-section button{width:auto;font-size:14px;}
-  #search{width:75%;}
   form[name="login"]{width:calc(100% - 8px);flex-direction:column;}
   form[name="login"] section:nth-of-type(odd){width:100%;}
   .separator{
