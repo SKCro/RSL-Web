@@ -7,7 +7,8 @@ html{
 *{scrollbar-color:#048 #024;}
 *:focus-visible{outline:3px solid #0080fff0;}
 body{
-  margin:40px 0;
+  margin:0;
+  padding:32px 0;
   font-family:var(--standard-font);
   background:#f0f0f0;
   color:#020202;
@@ -50,8 +51,7 @@ h1,h2,h3,h4,h5,h6,.ultrabold{font-family:Source Sans Pro Black,var(--standard-fo
 #topBar,#footer{
   display:flex;
   position:fixed;
-  padding:4px;
-  width:calc(100% - 8px);
+  width:100%;
   height:32px;
   justify-content:center;
   color:#f0f0f0;
@@ -67,21 +67,21 @@ h1,h2,h3,h4,h5,h6,.ultrabold{font-family:Source Sans Pro Black,var(--standard-fo
 
 .top-bar-section{
   display:flex;
-  width:25%;
+  width:35%;
 }
 .top-bar-section:nth-of-type(2){justify-content:right;}
 .top-bar-section button{
-  width:128px;
+  width:auto;
   height:100%;
   border:0;
+  border-radius:0;
   font-size:16px;
   margin-right:8px;
   background:none;
   box-shadow:0 0;
 }
-.top-bar-section button:hover{
-  color:#020202;
-  background:linear-gradient(#aaa,#ccc);
+.top-bar-section button:hover,.top-bar-section button:active,top-bar-section button:focus-visible{
+  background:linear-gradient(#f0f0f050,#0000);
   box-shadow:0 0;
 }
 #home{
@@ -112,16 +112,27 @@ input:not([type="button"],[type="submit"]){
   text-align:left;
   background:#0128;
   color:#f0f0f0;
+  text-shadow:var(--inset);
   backdrop-filter:blur(4px);
 }
-input:not([type="button"],[type="submit"])::placeholder{opacity:0.64;font-weight:100;}
+input:not([type="button"],[type="submit"])::placeholder{
+  font-weight:normal;
+  opacity:0.64;
+  color:#f0f0f0;
+  text-shadow:var(--inset);
+}
 form[name="login"] section:nth-of-type(odd){
   width:33.33%;
   margin:auto;
   padding:4px;
   text-align:center;
 }
-.login{display:flex;flex-direction:column;}
+.login{
+  display:flex;
+  flex-direction:column;
+  background:#ddd;
+  border:1px solid #bbb;
+}
 
 .separator{
   display:flex;
@@ -156,7 +167,7 @@ button,input[type="button"],input[type="submit"]{
   cursor:pointer;
   transition:all 0.1s;
 }
-button:hover,input[type="button"]:hover,input[type="submit"]:hover,button:focus,input[type="button"]:focus,input[type="submit"]:focus{
+button:hover,input[type="button"]:hover,input[type="submit"]:hover,button:focus-visible,input[type="button"]:focus-visible,input[type="submit"]:focus-visible{
   background-position:0 0;
   box-shadow:3px 3px 4px #020202;
 }
